@@ -468,7 +468,7 @@ class RetrofitGenerator extends GeneratorForAnnotation<retrofit.RestApi> {
               break;
             case retrofit.Parser.JsonSerializable:
               blocks.add(Code(
-                  "var value = $_resultVar.data.map((dynamic i) => ${_displayString(innerReturnType)}.fromJson(i as Map<String,dynamic>)).toList();"));
+                  "var value = $_resultVar.data.map((dynamic i) => ${_displayString(innerReturnType)}().fromJson(i as Map<String,dynamic>)).toList();"));
               break;
             case retrofit.Parser.DartJsonMapper:
               blocks.add(Code(
