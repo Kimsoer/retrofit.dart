@@ -597,10 +597,10 @@ class RetrofitGenerator extends GeneratorForAnnotation<retrofit.RestApi> {
               var mapperVal;
               if (typeArgs.length > 0) {
                 mapperVal =
-                    "final value = ${_displayString(returnType)}.fromJson($_resultVar.data,${_getInnerJsonSerializableMapperFn(returnType)});";
+                    "final value = ${_displayString(returnType)}().fromJson($_resultVar.data,${_getInnerJsonSerializableMapperFn(returnType)});";
               } else {
                 mapperVal =
-                    "final value = ${_displayString(returnType)}.fromJson($_resultVar.data);";
+                    "final value = ${_displayString(returnType)}().fromJson($_resultVar.data);";
               }
               blocks.add(Code(mapperVal));
               break;
