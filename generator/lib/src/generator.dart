@@ -73,7 +73,7 @@ class RetrofitGenerator extends GeneratorForAnnotation<retrofit.RestApi> {
       c
         ..name = '_$className'
         ..types.addAll(element.typeParameters.map((e) => refer(e.name)))
-        ..fields.addAll([_buildDioFiled(), _buildBaseUrlFiled(baseUrl)])
+        ..fields.addAll([_buildDioFiled()])
         ..constructors.addAll(
           annotClassConsts.map(
             (e) => _generateConstructor(baseUrl, superClassConst: e),
@@ -100,10 +100,10 @@ class RetrofitGenerator extends GeneratorForAnnotation<retrofit.RestApi> {
     ..type = refer("Dio")
     ..modifier = FieldModifier.final$);
 
-  Field _buildBaseUrlFiled(String url) => Field((m) => m
-    ..name = _baseUrlVar
-    ..type = refer("String")
-    ..modifier = FieldModifier.var$);
+  // Field _buildBaseUrlFiled(String url) => Field((m) => m
+  //   ..name = _baseUrlVar
+  //   ..type = refer("String")
+  //   ..modifier = FieldModifier.var$);
 
   Constructor _generateConstructor(
     String url, {
