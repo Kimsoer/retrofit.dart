@@ -15,15 +15,13 @@ dependencies:
   built_collection: ^5.0.0
   code_builder: ^3.2.0
   tuple: ^1.0.2
-  retrofit:
-    git:
-      url: https://github.com/DvKyuth/retrofit.dart.git
-      path: annotation
   analyzer: any
   dart_style: ^1.0.0
   build: ^1.2.2
 
 dev_dependencies:
+  retrofit:
+    path: ../annotation
   test:
   source_gen_test: any
   resource:
