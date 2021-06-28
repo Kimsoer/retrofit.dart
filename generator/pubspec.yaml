@@ -11,13 +11,14 @@ environment:
 
 dependencies:
   dio: ^4.0.0-beta6
-  source_gen: ^0.9.4+2
+  source_gen: ^1.0.2
+
   built_collection: ^5.0.0
   code_builder: ^3.2.0
   tuple: ^1.0.2
   analyzer: any
-  dart_style: ^1.0.0
-  build: ^1.2.2
+  dart_style: ^2.0.1
+  build: ^2.0.0
 
 dev_dependencies:
   retrofit:
